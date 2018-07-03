@@ -31,6 +31,8 @@ class DoctorsReviewsController < ApplicationController
   end
 
   # POST /doctorsreviews
+  # The recommendations work in a way that it gives recommendations of other doctors
+  # with same specialty of same or higher rating.
   def create
     final_set = []
     params['doctors_review'].permit!
